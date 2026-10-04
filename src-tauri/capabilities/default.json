@@ -1,0 +1,29 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window: window state/controls for fullscreen/screensaver/tray, event listening, OAuth loopback, and opening the auth server URL in the system browser.",
+  "windows": ["main"],
+  "permissions": [
+    "core:event:allow-listen",
+    "core:event:allow-unlisten",
+    "core:window:allow-is-fullscreen",
+    "core:window:allow-is-minimized",
+    "core:window:allow-is-visible",
+    "core:window:allow-set-fullscreen",
+    "core:window:allow-set-cursor-visible",
+    "core:window:allow-hide",
+    "core:window:allow-show",
+    "core:window:allow-set-focus",
+    "core:window:allow-unminimize",
+    "oauth:allow-start",
+    "oauth:allow-cancel",
+    {
+      "identifier": "opener:allow-open-url",
+      "allow": [
+        { "url": "https://bsky.social/*" },
+        { "url": "https://*.bsky.social/*" },
+        { "url": "https://*.bsky.network/*" }
+      ]
+    }
+  ]
+}

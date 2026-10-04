@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1418"/>
+      <stop offset="0.62" stop-color="#123a40"/>
+      <stop offset="1" stop-color="#0d1f1d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f6f3b0" stop-opacity="0.9"/>
+      <stop offset="0.35" stop-color="#d9f08a" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#d9f08a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bloom" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffb3cb" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffb3cb" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="tile">
+      <rect x="64" y="64" width="896" height="896" rx="200"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#tile)">
+    <rect x="64" y="64" width="896" height="896" fill="url(#sky)"/>
+    <!-- horizon glow and ground -->
+    <ellipse cx="512" cy="760" rx="560" ry="120" fill="#1b5a5a" opacity="0.45"/>
+    <path d="M64 790 Q300 740 512 770 T960 760 V960 H64 Z" fill="#0a1714"/>
+    <path d="M64 790 Q300 740 512 770 T960 760" fill="none" stroke="#2f6f62" stroke-width="6" opacity="0.7"/>
+
+    <!-- fireflies -->
+    <circle cx="300" cy="300" r="70" fill="url(#glow)"/>
+    <circle cx="300" cy="300" r="10" fill="#f6f3b0"/>
+    <circle cx="760" cy="230" r="52" fill="url(#glow)"/>
+    <circle cx="760" cy="230" r="8" fill="#f6f3b0"/>
+    <circle cx="700" cy="470" r="40" fill="url(#glow)"/>
+    <circle cx="700" cy="470" r="6" fill="#f6f3b0"/>
+
+    <!-- stem -->
+    <path d="M512 800 C500 700 530 600 512 440" fill="none" stroke="#6fbf7a" stroke-width="22" stroke-linecap="round"/>
+    <!-- leaves -->
+    <path d="M510 680 C430 650 380 600 360 540 C440 545 500 590 510 680 Z" fill="#7fcf86"/>
+    <path d="M516 610 C600 590 650 540 672 480 C590 480 528 525 516 610 Z" fill="#9ccc65"/>
+    <path d="M505 745 C450 735 410 705 392 665 C450 665 495 690 505 745 Z" fill="#66bb6a"/>
+
+    <!-- flower -->
+    <circle cx="512" cy="400" r="190" fill="url(#bloom)"/>
+    <g fill="#f48fb1">
+      <circle cx="512" cy="320" r="62"/>
+      <circle cx="588" cy="375" r="62"/>
+      <circle cx="560" cy="465" r="62"/>
+      <circle cx="464" cy="465" r="62"/>
+      <circle cx="436" cy="375" r="62"/>
+    </g>
+    <circle cx="512" cy="400" r="46" fill="#ffb74d"/>
+  </g>
+</svg>
